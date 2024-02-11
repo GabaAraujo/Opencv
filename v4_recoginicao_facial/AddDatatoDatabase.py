@@ -40,6 +40,26 @@ data = {
             "standing": "G",
             "year": 2,
             "last_attendance_time": "2022-12-11 00:54:34"
+        },
+    "1":
+        {
+            "name": "Gabriel Araujo",
+            "major": "Eng da computação",
+            "starting_year": 2020,
+            "total_attendance": 7,
+            "standing": "G",
+            "year": 2,
+            "last_attendance_time": "2022-12-11 00:54:34"
+        },
+    "2":
+        {
+            "name": "Camilla Emanuella Assis",
+            "major": "Pedagoga",
+            "starting_year": 2001,
+            "total_attendance": 20,
+            "standing": "G",
+            "year": 20,
+            "last_attendance_time": "2022-12-11 00:54:34"
         }
 }
 

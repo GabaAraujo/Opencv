@@ -18,7 +18,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 # Caminho para o arquivo de vídeo
-video_path = 'video/video3.mp4'
+#video_path = 'video/video3.mp4'
 
 # Abre o vídeo
 
@@ -26,9 +26,9 @@ video_path = 'video/video3.mp4'
 bucket = storage.bucket()
 
 
-#cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
-cap = cv2.VideoCapture(video_path)
+#cap = cv2.VideoCapture(video_path)
 cap.set(3, 640)
 cap.set(4, 480)
 
@@ -108,7 +108,7 @@ while True:
                                                    "%Y-%m-%d %H:%M:%S")
                 secondsElapsed = (datetime.now() - datetimeObject).total_seconds()
                 print(secondsElapsed)
-                if secondsElapsed > 30:
+                if secondsElapsed > 0:
                     ref = db.reference(f'Students/{id}')
                     studentInfo['total_attendance'] += 1
                     ref.child('total_attendance').set(studentInfo['total_attendance'])
