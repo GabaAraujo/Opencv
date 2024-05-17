@@ -5,7 +5,6 @@ import math
 
 
 
-
 class poseDetector(): #montar uma classe com todos os dados de cada objeto detectado, para modularização
 
     def __init__(self, mode=False,upBody = False, smooth = True,detectionCon=True,trackCon=0.5) -> None: #valores padroes ja definidos, podem ser alterados
@@ -67,7 +66,7 @@ class poseDetector(): #montar uma classe com todos os dados de cada objeto detec
         #biceps
         #Retorna o ângulo cuja tangente é o quociente de dois números
         angle = math.degrees(math.atan2(y3 - y2, x3 - x2) - math.atan2(y1-y2, x1-x2)) #comparando o angulo do centro aos 2 pontos do braco, 
-        #print(angle)
+        print(angle)
 
 
         #dedsenha o angulo
@@ -83,10 +82,7 @@ class poseDetector(): #montar uma classe com todos os dados de cada objeto detec
             cv2.circle(img, (x3, y3), 15, (255,0,0), 2)
             cv2.putText(img, str(int(angle)), (x2-50, y2+50),cv2.FONT_HERSHEY_COMPLEX,2,(255,0,255),2) #printa o angulo
 
-
         return angle
-    
-
 
     #print(result.pose_landmarks) #mostra os resultados mapeados
 
